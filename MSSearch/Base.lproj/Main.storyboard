@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="SearchVC" customClass="SearchVC" customModule="MSSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="0od-t6-vfx">
+                                <rect key="frame" x="100.5" y="133.5" width="174" height="400"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logomakr_39pC59" translatesAutoresizingMaskIntoConstraints="NO" id="Hw8-j2-PeL">
+                                        <rect key="frame" x="21.5" y="0.0" width="131" height="252.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's search movies....." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMM-jk-mVv">
+                                        <rect key="frame" x="10.5" y="261.5" width="153" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <color key="textColor" red="0.050980392159999999" green="0.2784313725" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie title.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VdV-qq-Ctn">
+                                        <rect key="frame" x="20" y="296" width="134" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="VhX-LT-EdI"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="WiS-2y-fCZ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Se-ao-rGb">
+                                        <rect key="frame" x="50" y="355" width="74" height="45"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.2784313725" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="qib-TU-uCR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <state key="normal" title="SEARCH">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="SearchBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZBB-pa-xWa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VdV-qq-Ctn" secondAttribute="trailing" constant="20" id="6Sa-qD-wfF"/>
+                                    <constraint firstItem="6Se-ao-rGb" firstAttribute="leading" secondItem="0od-t6-vfx" secondAttribute="leading" constant="50" id="9VQ-pI-Hb0"/>
+                                    <constraint firstItem="VdV-qq-Ctn" firstAttribute="leading" secondItem="0od-t6-vfx" secondAttribute="leading" constant="20" id="iRd-gh-hZW"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Se-ao-rGb" secondAttribute="trailing" constant="50" id="nXb-1A-OPZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0od-t6-vfx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VnJ-jy-frs"/>
+                            <constraint firstItem="0od-t6-vfx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tlB-3h-qBI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myInput" destination="VdV-qq-Ctn" id="sNz-Sv-R7I"/>
+                        <segue destination="Rvl-f3-3Ww" kind="showDetail" identifier="list_table" id="JP6-lq-m7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="148"/>
+        </scene>
+        <!--ListVC-->
+        <scene sceneID="edE-zS-96j">
+            <objects>
+                <tableViewController id="Rvl-f3-3Ww" userLabel="ListVC" customClass="ListTableViewController" customModule="MSSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" id="1rD-hJ-al0" customClass="List" customModule="MSSearch" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IBV-Tr-Mcm">
+                            <rect key="frame" x="0.0" y="104" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.050980392159999999" green="0.2784313725" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                            <state key="normal" title="Back To Search Page">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="BackBT:" destination="Rvl-f3-3Ww" eventType="touchUpInside" id="O0P-Kj-vZh"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="76" id="KLi-rQ-7cg" customClass="ListTableViewCell" customModule="MSSearch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="76"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KLi-rQ-7cg" id="SPn-sR-FWs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="spider" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naH-rf-5GZ">
+                                            <rect key="frame" x="28" y="16" width="339" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="Z8w-zj-nW4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                            <color key="textColor" red="0.050980392159999999" green="0.2784313725" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="naH-rf-5GZ" firstAttribute="trailing" secondItem="SPn-sR-FWs" secondAttribute="trailingMargin" id="DqT-Lj-mmb"/>
+                                        <constraint firstItem="naH-rf-5GZ" firstAttribute="centerY" secondItem="SPn-sR-FWs" secondAttribute="centerY" id="ZW8-jd-aMq"/>
+                                        <constraint firstItem="naH-rf-5GZ" firstAttribute="leading" secondItem="SPn-sR-FWs" secondAttribute="leadingMargin" constant="20" id="auk-4p-Om8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="movieTitle" destination="naH-rf-5GZ" id="TAw-bL-Vku"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rvl-f3-3Ww" id="WFB-jG-xYL"/>
+                            <outlet property="delegate" destination="Rvl-f3-3Ww" id="7Oq-iV-b0i"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="yu9-wq-Ojj" kind="show" identifier="Detail_Page" action="showDetailViewController:sender:" id="2xs-3A-A3d"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWc-rd-m9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="155"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="lZh-k8-QVt">
+            <objects>
+                <viewController id="yu9-wq-Ojj" userLabel="DetailsVC" customClass="DetailsVC" customModule="MSSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p0A-KW-dRi"/>
+                        <viewControllerLayoutGuide type="bottom" id="43S-br-5G3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1ze-fh-Cse">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJz-fz-AOH">
+                                <rect key="frame" x="21" y="25" width="43" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ron-Gg-uAd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="&lt;BACK">
+                                    <color key="titleColor" red="0.050980392159999999" green="0.2784313725" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackBT:" destination="yu9-wq-Ojj" eventType="touchUpInside" id="pUB-5h-ay0"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="41q-zu-nJm">
+                                <rect key="frame" x="20" y="55" width="345" height="512"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="drG-92-wgh">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="350"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No_Photo_Available" translatesAutoresizingMaskIntoConstraints="NO" id="ddQ-1t-84K">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="350"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="350" id="Wy4-Ez-3bZ"/>
+                                                    <constraint firstAttribute="width" constant="200" id="vg2-Yb-iqp"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qh0-4B-arU">
+                                        <rect key="frame" x="0.0" y="350" width="345" height="162"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3f-Hl-x6E">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHF-2K-ehV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="50.5"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Social Network the fist movie of this " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwF-Cx-qiC">
+                                                        <rect key="frame" x="172.5" y="0.0" width="172.5" height="50.5"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htX-6N-Kes">
+                                                <rect key="frame" x="0.0" y="55.5" width="345" height="51"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Year:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJG-Sk-7ms">
+                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="51"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2010-2012" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ7-rT-hFi">
+                                                        <rect key="frame" x="38" y="0.0" width="307" height="51"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wR6-bq-eg6">
+                                                <rect key="frame" x="0.0" y="111.5" width="345" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cp9-Dp-z4z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="50.5"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Movies " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U51-IN-Bid">
+                                                        <rect key="frame" x="38" y="0.0" width="307" height="50.5"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="drG-92-wgh" firstAttribute="centerX" secondItem="41q-zu-nJm" secondAttribute="centerX" id="a8Q-dN-gmd"/>
+                                    <constraint firstItem="Qh0-4B-arU" firstAttribute="centerX" secondItem="41q-zu-nJm" secondAttribute="centerX" id="lVb-jr-8a0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="41q-zu-nJm" firstAttribute="centerX" secondItem="1ze-fh-Cse" secondAttribute="centerX" id="Evq-Pj-Ihe"/>
+                            <constraint firstItem="41q-zu-nJm" firstAttribute="leading" secondItem="1ze-fh-Cse" secondAttribute="leading" constant="20" id="H2B-eu-8D9"/>
+                            <constraint firstAttribute="trailing" secondItem="41q-zu-nJm" secondAttribute="trailing" constant="10" id="NIg-wV-Czh"/>
+                            <constraint firstItem="DJz-fz-AOH" firstAttribute="leading" secondItem="1ze-fh-Cse" secondAttribute="leadingMargin" constant="5" id="QAn-er-tM4"/>
+                            <constraint firstItem="43S-br-5G3" firstAttribute="top" secondItem="41q-zu-nJm" secondAttribute="bottom" constant="100" id="YSI-lh-wRj"/>
+                            <constraint firstItem="41q-zu-nJm" firstAttribute="top" secondItem="DJz-fz-AOH" secondAttribute="bottom" constant="10" id="oMq-j8-DXg"/>
+                            <constraint firstItem="DJz-fz-AOH" firstAttribute="top" secondItem="p0A-KW-dRi" secondAttribute="bottom" constant="5" id="yqd-OT-Yj9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moviename" destination="rwF-Cx-qiC" id="1nz-83-l1p"/>
+                        <outlet property="movietype" destination="U51-IN-Bid" id="uOA-Gv-Tq9"/>
+                        <outlet property="poster" destination="ddQ-1t-84K" id="dl4-zi-jjW"/>
+                        <outlet property="year" destination="TQ7-rT-hFi" id="Ec8-ci-PHI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMb-hu-Icz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757.5999999999999" y="147.97601199400302"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logomakr_39pC59" width="131" height="182"/>
+        <image name="No_Photo_Available" width="375" height="472"/>
+    </resources>
+</document>
